@@ -4,9 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <!--   <link href="css/style.min.css" rel="stylesheet"> -->
@@ -14,98 +12,205 @@
 
 <body>
   <header>
-
-    <nav class="container-top-nav">
-
-      <div class="top-nav-left">
-        <a class="logo-top-nav" href="index.html"> <img src="img/logo.png" width="154" height="64" alt="Глейси"> </a>
-        <ul class="ul-main-nav">
-          <li><a href="">Каталог</a></li>
+    <div class="top-nav">
+      <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="На главную"></a>
+      <nav class="top-nav">
+        <ul class="top-nav-left">
+          <li>Каталог
+            <div class="inner-menu hidden">
+              <span>Новинки</span>
+              <!--  или заголовок? не понятно по смыслу -->
+              <ul>
+                <li>Сливочное</li>
+                <li>Щербеты</li>
+                <li>Фруктовый лед</li>
+                <li>Мелорин</li>
+              </ul>
+            </div>
+          </li>
           <li><a href="">Доставка и оплата</a></li>
           <li><a href="">О компании</a></li>
         </ul>
-      </div>
 
-      <div class="top-nav-right">
-        <label class="hidden">
-          <input type="search" placeholder="Поиск:">
-        </label>
-        <ul class="ul-user-nav">
-          <!-- это может быть списком?  -->
-          <li> <img src="img/icon-search.png" width="16" height="16" alt="Найти"> </li>
-          <li> <img src="img/icon-login.png" width="20" height="19" alt="Войти">Вход</li>
-          <li> <img src="img/icon-cart.png" width="21" height="20" alt="Корзина">Пусто</li>
-        </ul>
-      </div>
+        <div class="top-nav-right">
+          <ul class="ul-user-nav">
+            <li> <svg></svg>
+              <form class="hidden">
+                <label>
+                  <input type="search" placeholder="Крем-брюле">
+                </label>
+              </form>
+            </li>
+            <li> <svg></svg>Вход
+              <div class="hidden">
+                <form method="post" action="https://echo.htmlacademy.ru">
+                  <label>
+                    <input type="email" name="login" value="" placeholder="email@example.com">
+                    <input type="password" name="password" value="" placeholder="......">
+                  </label>
+                  <button type="submit">Войти</button>
+                </form>
+                <div>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
+              </div>
+            </li>
+            <li> <svg></svg>Пусто
+              <form class="hidden" method="post" action="https://echo.htmlacademy.ru">
+                <div class="">
+                  <svg></svg>
+                  <img src="#.png" alt="">
+                  <p>Пломбир с апельсиновым джемом</p> <span>1,5 кг</span> x <span>200 руб.</span> <span>300 pуб.</span>
+                </div>
+                <div class="">
+                  <svg></svg>
+                  <img src="#.png" alt="">
+                  <p>Клубничный пломбир с присыпкой из белого шоколада</p> <span>1,5 кг</span> x <span>300 руб.</span> <span>450 pуб.</span>
+                </div>
 
-    </nav>
+                <div class="">
+                  <p>Итого: 750 руб.</p>
+                  <button type="submit" name="">Оформить заказ</button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="contacts">
       <p class="contacts-worktime">с 10 до 20, ежедневно<br>
-        <p class="contacts-tel">8 812 450-25-25</p>
+        <a href="tel:+78124502525" aria-label="Позвонить" class="contacts-tel">8 812 450-25-25</a> </p>
     </div>
   </header>
   <main>
+    <div class="breadcrumbs">
+      <a href="index.html">Главная </a>
+      <p>Каталог</p>
+      <p>Сливочное</p>
+    </div>
+    <h1>Сливочное мороженое</h1>
+
+    <form class="" action="https://echo.htmlacademy.ru" method="post">
+      <div class="">
+        <label>
+          Сортировка:
+          <select class="" name="">
+            <option value="">по популярности</option>
+            <option value="">сначала недорогие</option>
+            <option value="">сначала дорогие</option>
+            <option value="">по жирности</option>
+          </select>
+        </label>
+        <label>
+          Цена: <span>100 ₽</span>-<span>500 ₽</span>
+          <input type="range" name="" value="">
+        </label>
+        <label>
+          <ul>
+            <!-- списком норм? или лучше без него? -->
+            <li>
+              <input type="radio" name="" value=""> 0%
+            </li>
+            <li>
+              <input type="radio" name="" value=""> до 10%
+            </li>
+            <li>
+              <input type="radio" name="" value=""> до 30%
+            </li>
+            <li>
+              <input type="radio" name="" value=""> выше 30%
+            </li>
+          </ul>
+        </label>
+      </div>
+      <div class="">
+        <label>
+          Наполнители:
+          <ul>
+            <li>
+              <input type="checkbox" name="" value=""> шоколадные
+            </li>
+            <li>
+              <input type="checkbox" name="" value=""> сахарные присыпки
+            </li>
+            <li>
+              <input type="checkbox" name="" value=""> фрукты
+            </li>
+            <li>
+              <input type="checkbox" name="" value=""> сиропы
+            </li>
+            <li>
+              <input type="checkbox" name="" value=""> джемы
+            </li>
+          </ul>
+        </label>
+        <button type="submit" name="">Применить</button>
+      </div>
+    </form>
 
     <section>
-      <h3 class="hidden">Хиты продаж</h3>
+      <h2 class="visually-hidden">Мороженое на развес</h2>
+
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>310 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>310 ₽/кг</div>
         <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>380 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>380 ₽/кг</div>
         <p>Сливочно-кофейное с кусочками шоколада</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>355 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>355 ₽/кг</div>
         <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>415 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>415 ₽/кг</div>
         <p>Сливочное крем-брюле с карамельной подливкой</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>325 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>325 ₽/кг</div>
         <p>Сливочное с брусничным джемом</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>410 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>410 ₽/кг</div>
         <p>Сливочно-черничное с цельными ягодами черники</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>315 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>315 ₽/кг</div>
         <p>Сливочно-лимонное с карамельной присыпкой</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>320 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>320 ₽/кг</div>
         <p>Сливочное с шоколадной стружкой</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>440 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>440 ₽/кг</div>
         <p>Сливочно-ванильное с кусочками шоколада</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>435 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>435 ₽/кг</div>
         <p>Сливочноe с ментоловым сиропом</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>355 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>355 ₽/кг</div>
         <p>Сливочное с кусочками черного шоколада</p>
       </article>
       <article>
-        <img src="" alt="" width="" height="" title="">
-        <span>420 ₽/кг</span>
+        <img src="img/#.png" alt="" width="" height="" title="">
+        <div>420 ₽/кг</div>
         <p>Сливочное с мятным сиропом</p>
       </article>
 
@@ -114,26 +219,24 @@
 
   <footer>
     <ul>
-      <li><a href=""> <img alt="">фб</a> </li>
-      <li><a href=""> <img alt="">вк</a> </li>
-      <li><a href=""> <img alt="">инст</a> </li>
-      <li><a href=""> <img alt="">тви</a> </li>
+      <li><a href=""> <svg></svg> фб</a> </li>
+      <li><a href=""> <svg></svg> вк</a> </li>
+      <li><a href=""> <svg></svg> инст</a> </li>
+      <li><a href=""> <svg></svg> тви</a> </li>
     </ul>
     <ul>
-      <li><a href=""> <img alt="">Для поставщиков </a> </li>
-      <li><a href=""> <img alt="">О производстве </a> </li>
-      <li><a href=""> <img alt="">Наши документы </a> </li>
-      <li><a href=""> <img alt="">Экологические стандаты </a> </li>
+      <li><a href=""> <svg></svg>Для поставщиков </a> </li>
+      <li><a href="">О производстве </a> </li>
+      <li><a href="">Наши документы </a> </li>
+      <li><a href="">Экологические стандаты </a> </li>
     </ul>
     <div>
-      <a href=""> <img src="" alt=""> </a>
-      <p>Сделано в HTML Academy © 2019</p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"> <svg></svg> </a>
+      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </div>
 
   </footer>
 
-  <div class="modal">
-  </div>
 
   <!--     <script src="js/script-index.js"> </script> -->
   <!--     <script src="js/script-index.min.js"> </script> -->
