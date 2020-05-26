@@ -13,7 +13,7 @@
 <body>
   <header>
     <div class="top-nav">
-      <a href="index.html"><img src="img/icons/logo.svg" width="154" height="64" alt="На главную"></a>
+      <a href="index.html"><img src="img/icons/logo.svg" width="154" height="64" alt="На главную" title="На главную"></a>
       <nav class="top-nav">
         <ul class="top-nav-left">
           <li>Каталог
@@ -47,14 +47,16 @@
                 <path
                     d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
                     fill="inherit" />
-              </svg>Вход
+              </svg>
+              <!-- кажется, вход - это кнопка-->
+              <button type="button">Вход</button>
               <div class="hidden">
                 <form method="post" action="https://echo.htmlacademy.ru">
                   <label>
-                    <input type="email" name="login" placeholder="email@example.com">
+                    <input type="email" name="login" placeholder="email@example.com" required>
                   </label>
                   <label>
-                    <input type="password" name="password" placeholder="......">
+                    <input type="password" name="password" placeholder="••••••" required>
                   </label>
                   <div>
                     <button type="submit">Войти</button>
@@ -69,7 +71,8 @@
                 <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="inherit" />
                 <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="inherit" />
               </svg>
-              2 товара
+              <!-- и корзина тоже, мы же на нее кликаем?-->
+              <button type="button">2 товара</button>
               <div class="hidden">
                 <table>
                   <tr>
@@ -112,87 +115,88 @@
   </header>
   <main>
     <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
+      <li><a href="index.html" aria-label="На главную">Главная</a></li>
       <li>Каталог</li>
       <li>Сливочное</li>
     </ul>
 
     <h1>Сливочное мороженое</h1>
 
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form action="https://echo.htmlacademy.ru" method="get">
       <div>
         <label>
           Сортировка:
-          <select name="#">
-            <option value="#">по популярности</option>
-            <option value="#">сначала недорогие</option>
-            <option value="#">сначала дорогие</option>
-            <option value="#">по жирности</option>
+          <select name="sortList">
+            <option value="popular">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="milk-fat">по жирности</option>
           </select>
           <!-- здесь будет стрелочка -->
-          </svg>
 
         </label>
         <label>
           Цена: <span>100 ₽</span>-<span>500 ₽</span>
-          <input type="range" name="#" value="1">
+          <input type="range" name="price-diap" value="1">
         </label>
-
-        <ul>
-          <li>
-            <label>
-              <input type="radio" name="#">
-            </label> 0%
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="#" checked>
-            </label>до 10%
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="#"> до 30%
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="#"> выше 30%
-            </label>
-          </li>
-        </ul>
-
+        <fieldset>
+          <legend>Жирность:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="fat" value="0%">0%
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="fat" value="до 10%" checked>до 10%
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="fat" value="до 30%">до 30%
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="fat" value="выше 30%">выше 30%
+              </label>
+            </li>
+          </ul>
+        </fieldset>
       </div>
-      <div>
-        <p>Наполнители:</p>
+
+      <fieldset>
+        <legend>Наполнители:</legend>
         <ul>
           <li>
             <label>
-              <input type="checkbox" name="#" checked>
+              <input type="checkbox" name="шоколадные" checked>
             </label> шоколадные
           </li>
           <li>
             <label>
-              <input type="checkbox" name="#" checked>
+              <input type="checkbox" name="сахарные присыпки" checked>
             </label> сахарные присыпки
           </li>
           <li>
             <label>
-              <input type="checkbox" name="#">
+              <input type="checkbox" name="фрукты">
             </label> фрукты
           </li>
           <li>
             <label>
-              <input type="checkbox" name="#">
+              <input type="checkbox" name="сиропы">
             </label> сиропы
           </li>
           <li>
             <label>
-              <input type="checkbox" name="#">
+              <input type="checkbox" name="джемы">
             </label> джемы
           </li>
         </ul>
-        <button type="submit" name="#">Применить</button>
-      </div>
+        <button type="submit">Применить</button>
+      </fieldset>
     </form>
 
     <section>
@@ -284,16 +288,15 @@
 
   <footer>
     <ul>
-      <li><a href="#">
+      <li><a href="#" aria-label="Мы в Фейсбуке">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2" />
             <path
                 d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM22.06 11.45H19V14.9H22V18.34H19V27H16V18.34H13V14.9H16V11.45C15.9449 10.5957 16.2291 9.75426 16.7908 9.1083C17.3525 8.46234 18.1464 8.06407 19 8H22V11.45H22.06Z"
                 fill="white" fill-opacity="0.8" />
           </svg>
-
-          фб</a> </li>
-      <li><a href="#"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </a> </li>
+      <li><a href="#" aria-label="Мы в Вконтакте"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2" />
             <path
                 d="M18.64 16.49C18.9652 16.4904 19.2875 16.4293 19.59 16.31C19.8645 16.2077 20.0922 16.0085 20.23 15.75C20.3343 15.4964 20.3854 15.2241 20.38 14.95C20.376 14.7057 20.3143 14.4659 20.2 14.25C20.0714 14.0066 19.8523 13.8235 19.59 13.74C19.2687 13.627 18.9306 13.5695 18.59 13.57H16.59V16.57H17.16C17.75 16.52 18.24 16.51 18.64 16.49Z"
@@ -305,8 +308,8 @@
                 d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM24.6 22.53C24.3376 23.056 23.9537 23.5119 23.48 23.86C22.9342 24.2714 22.3122 24.5705 21.65 24.74C20.8286 24.9383 19.9848 25.029 19.14 25.01H13V11H18.45C19.2781 10.9868 20.1063 11.0235 20.93 11.11C21.473 11.194 21.9994 11.3627 22.49 11.61C22.9868 11.8462 23.4013 12.2258 23.68 12.7C23.9455 13.1728 24.0801 13.7079 24.07 14.25C24.0819 14.8916 23.8931 15.5209 23.53 16.05C23.1452 16.588 22.6142 17.0045 22 17.25V17.32C22.8272 17.4588 23.5898 17.8541 24.18 18.45C24.7295 19.0712 25.0163 19.8815 24.98 20.71C25.0043 21.3386 24.8738 21.9636 24.6 22.53Z"
                 fill="white" fill-opacity="0.8" />
           </svg>
-          вк</a> </li>
-      <li><a href="#"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </a> </li>
+      <li><a href="#" aria-label="Мы в Инстаграм"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2" />
             <g opacity="0.8">
               <path
@@ -321,14 +324,14 @@
                   fill="white" />
             </g>
           </svg>
-          инст</a> </li>
-      <li><a href="#"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </a> </li>
+      <li><a href="#" aria-label="Мы в Твиттере"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2" />
             <path
                 d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM25.94 14.81C25.69 21.33 22.48 25.64 14.94 25.51H14.46C14.01 25.51 9.91001 25.07 9.11001 23.69C10.8989 23.9555 12.7228 23.5494 14.23 22.55C13.18 22.26 11.31 22.09 10.98 19.7C11.3928 19.8642 11.8441 19.9058 12.28 19.82C11 19 9.53001 18.3 9.61001 16.17C10.028 16.4893 10.5445 16.652 11.07 16.63C10.3 16.4 8.92001 13.39 10.07 11.85C12.07 13.64 14.14 15.33 17.87 15.49C18.1 13.28 19.11 11.79 21.04 11.17C21.7375 10.9333 22.4908 10.9157 23.1986 11.1195C23.9065 11.3232 24.5351 11.7387 25 12.31C25.74 12.08 26.45 11.84 27.19 11.62C27.1758 11.9571 27.0846 12.2865 26.9234 12.5829C26.7622 12.8793 26.5353 13.1349 26.26 13.33C26.5167 13.3601 26.7768 13.3336 27.0221 13.2524C27.2674 13.1712 27.492 13.0372 27.68 12.86C27.5628 13.2985 27.3443 13.7034 27.0421 14.0421C26.7399 14.3808 26.3624 14.6438 25.94 14.81Z"
                 fill="white" fill-opacity="0.8" />
           </svg>
-          тви</a> </li>
+        </a> </li>
     </ul>
     <ul>
       <li><a href="#">
@@ -340,7 +343,7 @@
     </ul>
     <div>
       <!-- здесь будет лого академии -->
-      <a href="https://htmlacademy.ru/intensive/htmlcss"> </a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти в HTML Academy"> </a>
       <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </div>
 
