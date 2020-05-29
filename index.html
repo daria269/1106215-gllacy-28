@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <div class="top-nav">
+    <div class="container-top-nav">
       <img src="img/icons/logo.svg" width="154" height="64" alt="Глейси - магазин мороженого.">
       <nav class="top-nav">
         <ul class="top-nav-left">
@@ -34,7 +34,7 @@
               <title>Найти на сайте</title>
               <path
                   d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
-                  fill="inherit" />
+                  fill="white" />
             </svg>
             <form class="hidden" method="get" action="https://echo.htmlacademy.ru">
               <label>
@@ -49,7 +49,7 @@
                 <path
                     d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
                     fill="white" />
-              </svg> Вход</button>
+              </svg>Вход</button>
             <div class="hidden">
               <form method="post" action="https://echo.htmlacademy.ru">
                 <label>
@@ -76,31 +76,27 @@
       </nav>
     </div>
     <div class="contacts">
-      <p class="contacts-worktime">с 10 до 20, ежедневно<br>
-        <a href="tel:+78124502525" aria-label="Позвонить по телефону:" class="contacts-tel">8 812 450-25-25</a> </p>
+      <p class="contacts-worktime">с 10 до 20, ежедневно<br> </p>
+      <a href="tel:+78124502525" aria-label="Позвонить по телефону:" class="contacts-tel">8 812 450-25-25</a>
     </div>
   </header>
 
   <main>
     <h1 class="visually-hidden">
       Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
-    <!-- стили временно -->
     <div class="container-slider">
-      <div class="slider-field" style="height:716px; width:716px">
+      <div class="slider-field">
         <div>
           <img src="img/products/slide-1.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет.">
           <p>Пломбир с помадкой и клубничный щербет</p>
-          <a href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
         </div>
         <div>
           <img src="img/products/slide-2.png" width="639" height="582" alt="Шоколадный пломбир и лимонный сорбет.">
           <p>Шоколадный пломбир и лимонный сорбет</p>
-          <a href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
         </div>
         <div>
           <img src="img/products/slide-3.png" width="639" height="582" alt="Крем-брюле и пломбир с малиновым джемом.">
           <p>Крем-брюле и пломбир с малиновым джемом</p>
-          <a href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
         </div>
       </div>
       <div>
@@ -109,48 +105,47 @@
         <button type="button" aria-label="Перейти на второй слайд" class="indicator2"></button>
         <button type="button" aria-label="Перейти на третий слайд" class="indicator3"></button>
       </div>
-
+      <a href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
     </div>
     <!-- фон через стили подключаем -->
-    <section>
+    <section class="container-banner">
       <h2 class="visually-hidden">Специальные предложения</h2>
       <article class="banner raspberry-banner">
         <h3>Малинка даром!</h3>
         <p>При покупке 2кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно.</p>
-        <a href="catalog.html" class="button button-banner" aria-label="Перейти в каталог">Хочу варенье!</a>
+        <a href="catalog.html" class="orange-button button-banner" aria-label="Перейти в каталог">Хочу варенье!</a>
       </article>
       <article class="banner choco-banner">
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку<br>вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a href="catalog.html" class="button button-banner" aria-label="Перейти в каталог">Хочу шоколадки!</a>
+        <a href="catalog.html" class="orange-button button-banner" aria-label="Перейти в каталог">Хочу шоколадки!</a>
       </article>
     </section>
 
-    <section>
+    <section class="most-popular">
       <h2 class="visually-hidden">Хиты продаж</h2>
-
-      <article>
+      <article class="popular-item">
         <img src="img/products/product-1.png" alt="Сливочное мороженое с апельсином." width="267" height="267" title="Сливочное с апельсином">
         <p>310 ₽/кг</p>
-        <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+        <h3>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
-      <article>
+      <article class="popular-item">
         <img src="img/products/product-2.png" alt="Сливочно-кофейное мороженое." width="267" height="267" title="Сливочно-кофейное">
         <p>380 ₽/кг</p>
-        <h3>Сливочно-кофейное с кусочками шоколада</h3>
+        <h3>Сливочно-кофейное с кусочками<br> шоколада</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
-      <article>
+      <article class="popular-item">
         <img src="img/products/product-3.png" alt="Сливочно-клубничное мороженое." width="267" height="267" title="Сливочно-клубничное">
         <p>355 ₽/кг</p>
-        <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+        <h3>Сливочно-клубничное<br> с присыпкой из белого шоколада</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
-      <article>
+      <article class="popular-item">
         <img src="img/products/product-4.png" alt="Мороженое крем-брюле." width="267" height="267" title="Крем-брюле">
         <p>415 ₽/кг</p>
-        <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+        <h3>Сливочное крем-брюле<br> с карамельной подливкой</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
     </section>

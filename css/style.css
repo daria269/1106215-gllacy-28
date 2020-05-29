@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #849D8F;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body li {
+  list-style-type: none;
+}
+
+body ul {
+  margin: 0;
+  padding: 0;
+}
+
+body button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container-top-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  margin: 0px 27px 0 27px;
+  padding-top: 9px;
+  position: relative;
+  z-index: 100;
+}
+
+.top-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.top-nav-left {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: stretch;
+}
+
+.top-nav-right {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.top-nav-left li {
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.top-nav-left li:first-child {
+  margin-left: 24px;
+}
+
+.top-nav-left a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.top-nav-right li {
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0 16px;
+}
+
+.top-nav-right li svg {
+  padding: 6px 8px 6px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.top-nav-right li:first-child {
+  padding: 8px;
+}
+
+.top-nav-right li:first-child svg {
+  padding: 0;
+}
+
+.contacts {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 27px;
+  margin-left: auto;
+}
+
+.contacts-tel {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  margin: 8px 0 0 0;
+}
+
+.contacts-worktime {
+  margin: 0;
+}
+
+.container-slider {
+  margin: -73px auto;
+  width: 716px;
+  height: 716px;
+  background-color: rgba(215, 242, 227, 0.75);
+  /* надо это заблюрить потом  */
+  z-index: 10;
+  position: relative;
+  padding: 83px 34px 49px;
+  box-sizing: border-box;
+  /* с overflow: hidden; съезжает  влево*/
+  /* overflow: hidden; */
+}
+
+.slider-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-banner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 27px;
+  position: relative;
+  z-index: 100;
+}
+
+.banner h3 {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  margin: 16px 0;
+}
+
+.banner {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  min-height: 229px;
+  padding: 0 30px 0 16px;
+  border-radius: 16px;
+  position: relative;
+}
+
+/* только из папки css видит фон  */
+.raspberry-banner {
+  background: url("bg/raspberry-bg.png") no-repeat;
+}
+
+.choco-banner {
+  background: url("bg/choco-bg.png") no-repeat;
+}
+
+.orange-button {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+}
+
+.button-banner {
+  line-height: 24px;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 15px 22px 16px;
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  z-index: 5;
+}
+
+.most-popular {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 27px 0;
+}
+
+.most-popular h3 {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.popular-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
