@@ -76,7 +76,7 @@
       </nav>
     </div>
     <div class="contacts">
-      <p class="contacts-worktime">с 10 до 20, ежедневно<br> </p>
+      <p class="contacts-worktime">с 10 до 20, ежедневно<br></p>
       <a href="tel:+78124502525" aria-label="Позвонить по телефону:" class="contacts-tel">8 812 450-25-25</a>
     </div>
   </header>
@@ -124,25 +124,25 @@
 
     <section class="most-popular">
       <h2 class="visually-hidden">Хиты продаж</h2>
-      <article class="popular-item">
+      <article class="popular-item item-card ">
         <img src="img/products/product-1.png" alt="Сливочное мороженое с апельсином." width="267" height="267" title="Сливочное с апельсином">
         <p>310 ₽/кг</p>
         <h3>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
-      <article class="popular-item">
+      <article class="popular-item item-card ">
         <img src="img/products/product-2.png" alt="Сливочно-кофейное мороженое." width="267" height="267" title="Сливочно-кофейное">
         <p>380 ₽/кг</p>
         <h3>Сливочно-кофейное с кусочками<br> шоколада</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
-      <article class="popular-item">
+      <article class="popular-item item-card ">
         <img src="img/products/product-3.png" alt="Сливочно-клубничное мороженое." width="267" height="267" title="Сливочно-клубничное">
         <p>355 ₽/кг</p>
         <h3>Сливочно-клубничное<br> с присыпкой из белого шоколада</h3>
         <button class="hidden" type="button">Быстрый просмотр</button>
       </article>
-      <article class="popular-item">
+      <article class="popular-item item-card">
         <img src="img/products/product-4.png" alt="Мороженое крем-брюле." width="267" height="267" title="Крем-брюле">
         <p>415 ₽/кг</p>
         <h3>Сливочное крем-брюле<br> с карамельной подливкой</h3>
@@ -150,7 +150,7 @@
       </article>
     </section>
 
-    <section>
+    <section class="section-about">
       <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
       <ul>
         <!-- здесь будут иконки -->
@@ -169,39 +169,40 @@
       </ul>
     </section>
 
-    <section>
+    <section class="section-news">
       <h2 class="visually-hidden">Новости</h2>
-      <article>
+
+      <article class="banner-news">
         <h3>Новое в нашем блоге</h3>
-        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <a href="#">10 способов сервировки<br>фруктовых щербетов<br>к столу</a>
       </article>
 
-      <article>
+      <article class="banner-subscribe">
         <h3 class="visually-hidden">Подписаться на рассылку</h3>
-        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе<br>всего самого вкусного, что у нас происходит. Обещаем не спамить<br>и не слать всякой ненужной ерунды. Честно =)
         </p>
         <form method="post" action="https://echo.htmlacademy.ru">
           <label>
             <input type="email" name="email" placeholder="email@example.com" required>
           </label>
-          <button type="submit">Отправить</button>
+          <button class="orange-button" type="submit">Отправить</button>
         </form>
       </article>
     </section>
 
     <section class="container-map">
-      <h3>Как нас найти</h3>
-      <img src="img/map.jpg" width="1200" height="430" alt="Как нас найти." title="Мы на карте">
-      <div>
+      <h3 class="visually-hidden">Как нас найти</h3>
+      <img class="map" src="img/map.jpg" width="1200" height="430" alt="Как нас найти." title="Мы на карте">
+      <div class="address-info">
         <p>Адрес главного офиса и офлайн-магазина:<br><span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
         </p>
         <p>Для заказов по телефону:<br><a href="tel:+78124502525" aria-label="Позвонить по телефону:">8 812 450-25-25</a><br>(с 10 до 20 ежедневно)
         </p>
-        <button type="button" aria-label="Оставить отзыв">Форма обратной связи</button>
+        <button class="orange-button" type="button" aria-label="Оставить отзыв">Форма обратной связи</button>
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="container-footer">
     <ul>
       <li><a href="#" aria-label="Мы в Фейсбуке">
           <svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,7 +270,7 @@
 
   <div class="modal hidden">
     <p>Мы обязательно вам ответим!</p>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
       <label>
         <input type="text" name="name" placeholder="Имя Фамилия">
       </label>
