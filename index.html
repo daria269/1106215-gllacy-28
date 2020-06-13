@@ -29,7 +29,6 @@
           <li class="nav-left-li"><a href="#">О компании</a></li>
         </ul>
 
-
         <ul class="top-nav-right">
           <li> <svg class="icon-nav nav-right-li" width="16" role="img" tabindex="0" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <title>Найти на сайте</title>
@@ -37,21 +36,22 @@
                   d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
                   fill="inherit" />
             </svg>
-            <form class="hidden" method="get" action="https://echo.htmlacademy.ru">
+            <form class="hidden search" method="get" action="https://echo.htmlacademy.ru">
               <label>
                 <input class="input-field" type="search" aria-label="Поиск" placeholder="Крем-брюле">
               </label>
             </form>
           </li>
-          <li class="nav-right-li">
-            <button type="button" aria-label="Войти в личный кабинет">
+
+          <li>
+            <div class="nav-right-li">
               <svg class="icon-nav" aria-hidden="true" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="inherit" />
                 <path
                     d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
                     fill="inherit" />
-              </svg>Вход</button>
-
+              </svg>Вход
+            </div>
             <div class="login-form hidden">
               <form method="post" action="https://echo.htmlacademy.ru">
                 <label>
@@ -61,7 +61,7 @@
                   <input class="input-field" type="password" name="password" placeholder="••••••" required aria-label="Ввести пароль">
                 </label>
                 <div>
-                  <button class="orange-button" type="submit">Войти</button>
+                  <button class="orange-button header-button" type="submit">Войти</button>
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
                 </div>
@@ -115,12 +115,12 @@
       <article class="banner raspberry-banner">
         <h3>Малинка даром!</h3>
         <p>При покупке 2кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно.</p>
-        <a href="catalog.html" class="orange-button button-banner" aria-label="Перейти в каталог">Хочу варенье!</a>
+        <a href="catalog.html" class="orange-button button-index" aria-label="Перейти в каталог">Хочу варенье!</a>
       </article>
       <article class="banner choco-banner">
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку<br>вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a href="catalog.html" class="orange-button button-banner" aria-label="Перейти в каталог">Хочу шоколадки!</a>
+        <a href="catalog.html" class="orange-button button-index" aria-label="Перейти в каталог">Хочу шоколадки!</a>
       </article>
     </section>
 
@@ -128,25 +128,25 @@
       <h2 class="visually-hidden">Хиты продаж</h2>
       <article class="popular-item item-card">
         <img src="img/products/product-1.png" alt="Сливочное мороженое с апельсином." width="267" height="267" title="Сливочное с апельсином">
-        <p>310 ₽/кг</p>
+        <p>310 ₽<span>/кг</span></p>
         <h3>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h3>
         <button class="hidden orange-button" type="button">Быстрый просмотр</button>
       </article>
       <article class="popular-item item-card ">
         <img src="img/products/product-2.png" alt="Сливочно-кофейное мороженое." width="267" height="267" title="Сливочно-кофейное">
-        <p>380 ₽/кг</p>
+        <p>380 ₽<span>/кг</span></p>
         <h3>Сливочно-кофейное с кусочками<br> шоколада</h3>
         <button class="hidden orange-button" type="button">Быстрый просмотр</button>
       </article>
       <article class="popular-item item-card ">
         <img src="img/products/product-3.png" alt="Сливочно-клубничное мороженое." width="267" height="267" title="Сливочно-клубничное">
-        <p>355 ₽/кг</p>
+        <p>355 ₽<span>/кг</span></p>
         <h3>Сливочно-клубничное<br> с присыпкой из белого шоколада</h3>
         <button class="hidden orange-button" type="button">Быстрый просмотр</button>
       </article>
       <article class="popular-item item-card">
         <img src="img/products/product-4.png" alt="Мороженое крем-брюле." width="267" height="267" title="Крем-брюле">
-        <p>415 ₽/кг</p>
+        <p>415 ₽<span>/кг</span></p>
         <h3>Сливочное крем-брюле<br> с карамельной подливкой</h3>
         <button class="hidden orange-button" type="button">Быстрый просмотр</button>
       </article>
@@ -179,18 +179,15 @@
       </article>
 
       <article class="banner-subscribe">
-        <div class="banner-subscribe-layout">
-          <h3 class="visually-hidden">Подписаться на рассылку</h3>
-          <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе<br>всего самого вкусного, что у нас происходит. Обещаем не спамить<br>и не слать всякой ненужной ерунды. Честно =)
-          </p>
-          <form method="post" action="https://echo.htmlacademy.ru">
-            <label>
-              <input class="input-field" type="email" name="email" placeholder="email@example.com" required>
-            </label>
-            <button class="orange-button" type="submit">Отправить</button>
-          </form>
-        </div>
-
+        <h3 class="visually-hidden">Подписаться на рассылку</h3>
+        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе<br>всего самого вкусного, что у нас происходит. Обещаем не спамить<br>и не слать всякой ненужной ерунды. Честно =)
+        </p>
+        <form method="post" action="https://echo.htmlacademy.ru">
+          <label>
+            <input class="input-field" type="email" name="email" placeholder="email@example.com" required>
+          </label>
+          <button class="orange-button button-index" type="submit">Отправить</button>
+        </form>
       </article>
     </section>
 
@@ -202,7 +199,7 @@
         </p>
         <p>Для заказов по телефону:<br><a href="tel:+78124502525" aria-label="Позвонить по телефону:">8 812 450-25-25</a><br>(с 10 до 20 ежедневно)
         </p>
-        <button class="orange-button" type="button" aria-label="Оставить отзыв">Форма обратной связи</button>
+        <button class="orange-button button-index" type="button" aria-label="Оставить отзыв">Форма обратной связи</button>
       </div>
     </section>
   </main>
@@ -233,7 +230,7 @@
       <li><a href="#" aria-label="Мы в Инстаграм">
           <svg class="icon-social" aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="icon-stroke" d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" />
-            <g opacity="0.8">
+            <g>
               <path class="icon-letter"
                   d="M22.92 18C22.92 19.3155 22.3974 20.5771 21.4673 21.5072C20.5371 22.4374 19.2755 22.96 17.96 22.96C16.6445 22.96 15.3829 22.4374 14.4528 21.5072C13.5226 20.5771 13 19.3155 13 18C13.001 17.6158 13.048 17.233 13.14 16.86H12.24V23.7H23.64V16.86H22.74C22.8406 17.2325 22.901 17.6147 22.92 18Z"
                   fill="white" />
@@ -257,12 +254,12 @@
         </a> </li>
     </ul>
     <ul class="footer-menu">
-      <li><a href="#">
-          <svg class="icon-heart" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" />
-          </svg>
-          Для поставщиков </a> </li>
+      <li class="for-suppliers">
+        <svg class="icon-heart" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" />
+        </svg>
+        <a href="#">Для поставщиков </a> </li>
       <li><a href="#">О производстве </a> </li>
       <li><a href="#">Наши документы </a> </li>
       <li><a href="#">Экологические стандарты </a> </li>
@@ -287,7 +284,7 @@
       <label>
         <textarea class="input-field" name="feedback" rows="8" cols="45" placeholder="В свободной форме" required></textarea>
       </label>
-      <button class="orange-button" type="submit">Отправить</button>
+      <button class="orange-button button-index" type="submit">Отправить</button>
     </form>
     <svg class="icon-close" role="img" tabindex="0" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>Закрыть окно</title>
