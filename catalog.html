@@ -156,10 +156,9 @@
     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
       <div>
         <div class="select">
-          <!-- я подумала лучше оставлю селект , если можно. там сложно будет выбирать сортировку, тк это не ссылки -->
+          <!-- я подумала лучше оставлю селект , если можно. там сложно будет выбирать сортировку, тк это не ссылки  -->
           <label for="select" class="select-label">
-            Сортировка:
-          </label>
+            Сортировка: </label>
           <!-- кривовато вышло, но что-то получилось -->
           <select class="filter-option" id="select" name="sortList">
             <option value="popular">по популярности</option>
@@ -170,8 +169,7 @@
         </div>
 
         <label>
-          Цена:
-          <span>100 ₽</span>-<span>500 ₽</span>
+          Цена: <span>100 ₽</span>-<span>500 ₽</span>
           <input type="range" name="price-range">
         </label>
         <fieldset>
@@ -181,20 +179,46 @@
               <input class="radio-input" id="0%" type="radio" name="fat" value="0%">
               <label for="0%">0%</label>
             </li>
-            <li class="radio"><input class="radio-input" id="<10%" type="radio" name="fat" value="до 10%" checked>
-              <label for=" <10%"> 10%</label>="10%</label>" </li>
-            <li class="radio"> <input class="radio-input" id="<30%" type="radio" name="fat" value="до 30%"> <label for="<30%">до 30%</label> </li>
-            <li class="radio"> <input class="radio-input" id=">30%" type="radio" name="fat" value="выше 30%"> <label for=">30%"> 30%</label>="30%</label>"
+            <li class="radio">
+              <input class="radio-input" id="<10%" type="radio" name="fat" value="до 10%" checked>
+              <label for="<10%">до 10%</label>
+            </li>
+            <li class="radio">
+              <input class="radio-input" id="<30%" type="radio" name="fat" value="до 30%">
+              <label for="<30%">до 30%</label>
+            </li>
+            <li class="radio">
+              <input class="radio-input" id=">30%" type="radio" name="fat" value="выше 30%">
+              <label for=">30%">выше 30%</label>
+            </li>
           </ul>
         </fieldset>
       </div>
+
       <fieldset>
-        <legend> выше="выше" наполнители:</legend>="наполнители:</legend>" <ul class="filter-option">
-          <li class="checkbox"> <input class="checkbox-input" type="checkbox" id="chocolate" name="chocolate" checked="checked"> <label for="chocolate"> ="30%</label>" до="до" шоколадные</label>="шоколадные</label>" <input class="checkbox-input"
-                type="checkbox" id="sugar-powder" name="sugar-powder" checked="checked"> <label for="sugar-powder"> присыпки</label>="присыпки</label>" <input class="checkbox-input" type="checkbox" id="fruits" name="fruits"> <label for="fruits">
-              ="наполнители:</legend>" ="10%</label>" сахарные="сахарные" фрукты</label>="фрукты</label>" <input class="checkbox-input" type="checkbox" id="syrup" name="syrup"> <label for="syrup"> ="шоколадные</label>" ="присыпки</label>"
-            сиропы</label>="сиропы</label>" <input class="checkbox-input" type="checkbox" id="jam" name="jam"> <label for="jam">="10%</label>" ="30%</label>" ="наполнители:</legend>" ="шоколадные</label>" ="присыпки</label>" ="фрукты</label>"
-            ="10%</label>" джемы</label>
+        <legend>Наполнители:</legend>
+
+        <ul class="filter-option">
+
+          <li class="checkbox">
+            <input class="checkbox-input" type="checkbox" id="chocolate" name="chocolate" checked>
+            <label for="chocolate">шоколадные</label>
+          </li>
+          <li class="checkbox">
+            <input class="checkbox-input" type="checkbox" id="sugar-powder" name="sugar-powder" checked>
+            <label for="sugar-powder">сахарные присыпки</label>
+          </li>
+          <li class="checkbox">
+            <input class="checkbox-input" type="checkbox" id="fruits" name="fruits">
+            <label for="fruits">фрукты</label>
+          </li>
+          <li class="checkbox">
+            <input class="checkbox-input" type="checkbox" id="syrup" name="syrup">
+            <label for="syrup">сиропы</label>
+          </li>
+          <li class="checkbox">
+            <input class="checkbox-input" type="checkbox" id="jam" name="jam">
+            <label for="jam">джемы</label>
           </li>
         </ul>
       </fieldset>
