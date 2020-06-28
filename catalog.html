@@ -60,7 +60,7 @@
                 <path
                     d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
                     fill="inherit" />
-              </svg>Вход
+              </svg>&ensp;Вход
             </div>
             <div class="login-form hidden">
               <form method="post" action="https://echo.htmlacademy.ru">
@@ -85,7 +85,7 @@
                 <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="#343434" />
                 <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="#343434" />
                 <path class="icon-cart-inner" d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37" />
-                </svgg>2 товара</div>
+              </svg>&ensp;2 товара</div>
             <div class="cart hidden">
               <table>
                 <thead class="visually-hidden">
@@ -143,23 +143,22 @@
 
   <main>
     <ol class="breadcrumbs">
-      <li>
+      <li class="breadcrumbs-li">
         <a href="index.html">Главная</a>
       </li>
-      <li>Каталог</li>
-      <li aria-current="page">
-        <span class="visually-hidden">Текущий пункт:</span>Сливочное</li>
+      <li class="breadcrumbs-li">
+        <a href="catalog.html">Каталог</a>
+      </li>
+      <li class="breadcrumbs-li" aria-current="page">Сливочное</li>
     </ol>
 
     <h1 class="catalog-heading">Сливочное мороженое</h1>
 
     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-      <div>
+      <div class="filter-block">
         <div class="select">
-          <!-- я подумала лучше оставлю селект , если можно. там сложно будет выбирать сортировку, тк это не ссылки  -->
-          <label for="select" class="select-label">
+          <label for="select" class="filter-name select-label">
             Сортировка: </label>
-          <!-- кривовато вышло, но что-то получилось -->
           <select class="filter-option" id="select" name="sortList">
             <option value="popular">по популярности</option>
             <option value="cheap">сначала недорогие</option>
@@ -167,13 +166,16 @@
             <option value="milk-fat">по жирности</option>
           </select>
         </div>
-
-        <label>
-          Цена: <span>100 ₽</span>-<span>500 ₽</span>
-          <input type="range" name="price-range">
+        <label class="price">
+          <div class="filter-name">
+            Цена: <span>100 ₽</span>&ensp;-&ensp;<span>500 ₽</span>
+          </div>
+          <div class="filter-option">
+            <input type="range" name="price-range" multiple>
+          </div>
         </label>
-        <fieldset>
-          <legend>Жирность:</legend>
+        <fieldset class="fieldset">
+          <legend class="filter-name">Жирность:</legend>
           <ul class="filter-option">
             <li class="radio">
               <input class="radio-input" id="fat-choice-1" type="radio" name="fat" value="0%">
@@ -194,40 +196,38 @@
           </ul>
         </fieldset>
       </div>
-
-      <fieldset>
-        <legend>Наполнители:</legend>
-
-        <ul class="filter-option">
-
-          <li class="checkbox">
-            <input class="checkbox-input" type="checkbox" id="chocolate" name="chocolate" checked>
-            <label for="chocolate">шоколадные</label>
-          </li>
-          <li class="checkbox">
-            <input class="checkbox-input" type="checkbox" id="sugar-powder" name="sugar-powder" checked>
-            <label for="sugar-powder">сахарные присыпки</label>
-          </li>
-          <li class="checkbox">
-            <input class="checkbox-input" type="checkbox" id="fruits" name="fruits">
-            <label for="fruits">фрукты</label>
-          </li>
-          <li class="checkbox">
-            <input class="checkbox-input" type="checkbox" id="syrup" name="syrup">
-            <label for="syrup">сиропы</label>
-          </li>
-          <li class="checkbox">
-            <input class="checkbox-input" type="checkbox" id="jam" name="jam">
-            <label for="jam">джемы</label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="filter-option button-filter" type="submit">Применить</button>
+      <div class="filter-block">
+        <fieldset class="fieldset">
+          <legend class="filter-name">Наполнители:</legend>
+          <ul class="filter-option">
+            <li class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="chocolate" name="chocolate" checked>
+              <label for="chocolate">шоколадные</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="sugar-powder" name="sugar-powder" checked>
+              <label for="sugar-powder">сахарные присыпки</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="fruits" name="fruits">
+              <label for="fruits">фрукты</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="syrup" name="syrup">
+              <label for="syrup">сиропы</label>
+            </li>
+            <li class="checkbox">
+              <input class="checkbox-input" type="checkbox" id="jam" name="jam">
+              <label for="jam">джемы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button-filter" type="submit">Применить</button>
+      </div>
     </form>
 
     <section class="catalog-items">
       <h2 class="visually-hidden">Мороженое на развес</h2>
-
       <article class="item-card">
         <img src="img/products/product-1.png" alt="Сливочное мороженое с апельсином." width="267" height="267" title="Сливочное с апельсином">
         <p>310 ₽<span>/кг</span></p>
