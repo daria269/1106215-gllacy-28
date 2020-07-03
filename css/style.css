@@ -15,6 +15,7 @@
   --grey-for-input-text: #999;
   --light-grey-opacity-05: rgba(248, 247, 244, 0.5);
   --light-grey: rgb(248, 247, 244);
+  --grey-cart-line: #cacac7;
   --grey-range-toggle: #ababab;
   --dirty-green: #849d8f;
   --dirty-orange: #d07058;
@@ -156,12 +157,13 @@ a:visited {
   outline: none;
 }
 
+.pages li {
+  margin-left: 21px;
+  position: relative;
+}
+
 .pages-a {
   cursor: pointer;
-  margin-right: 5px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,26 +227,50 @@ a:visited {
 
 .nav-left-li a {
   border-bottom: 1px solid var(--white-opacity-02);
+  margin: 7px 14px;
 }
 
 .inner-menu a {
   border-bottom: none;
+  margin: 0;
 }
 
-.pages-a:hover,
-.pages-a:focus {
-  background: var(--white-opacity-02);
+.pages-a:hover.pages-a::after,
+.pages-a:focus.pages-a::after {
+  content: "";
+  position: absolute;
+  top: -4;
+  left: -8;
+  background-color: var(--white-opacity-02);
   border-radius: 50%;
   width: 26px;
   height: 26px;
+  z-index: -1;
+}
+
+.pages-a:active.pages-a::after {
+  content: "";
+  position: absolute;
+  top: -4;
+  left: -8;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  z-index: -1;
+}
+
+.pages-a-disable svg {
+  fill: var(--white-opacity-02);
+  cursor: default;
 }
 
 .pages-a:active {
-  background-color: var(--basic-white);
   color: var(--extra-dark);
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
+}
+
+.pages-a:active svg {
+  fill: var(--extra-dark);
 }
 
 .nav-right-li {
@@ -328,10 +354,9 @@ a:visited {
   border-radius: 26px;
   color: var(--extra-dark);
   fill: var(--extra-dark);
-  border: none;
-
-  /* хоетела спросить, как можно сделать так, чтобы при наведении они не скакали? если у меня состояния на <a>, а не на <li> . можно сделать паддингами , но тогда будет underline, а не border */
+  border-color: transparent;
   padding: 7px 14px;
+  margin: 0;
 }
 
 .nav-right-li:focus,
@@ -435,8 +460,8 @@ a:visited {
   background-color: var(--basic-white);
   width: 143px;
   position: absolute;
-  top: 30px;
-  left: -21px;
+  top: 38px;
+  left: -5px;
   border-radius: 4px;
 }
 
@@ -473,16 +498,12 @@ a:visited {
   transform: rotate(-180deg);
 }
 
-.pages-a-disable svg {
-  fill: var(--white-opacity-02);
-}
-
-.pages-a-disable:hover {
-  background: none;
+.pages-a-disable:hover.pages-a::after {
+  background-color: transparent;
 }
 
 .nav-left-li {
-  margin-left: 32px;
+  margin-left: 5px;
   display: flex;
   cursor: pointer;
 }
@@ -519,12 +540,16 @@ a:visited {
   margin-left: 0;
 }
 
+.pages li:last-child {
+  margin-left: 26px;
+}
+
 .footer-menu li:nth-child(2) {
   grid-area: 2 / 1 / 3 / 2;
 }
 
 .top-nav-left li:first-child {
-  margin-left: 24px;
+  margin-left: 9px;
   position: relative;
 }
 
@@ -630,15 +655,17 @@ input::-ms-input-placeholder {
   background-color: var(--white-opacity-04);
 }
 
+.container-border {
+  background-image: url("../img/bg/post-bg.png");
+  border-radius: 16px;
+  height: 220px;
+  padding: 5px 6px;
+  box-sizing: border-box;
+}
+
 .banner-subscribe {
   font-family: "Roboto", "Nimbus Sans L", Helvetica, Arial, sans-serif;
-  border-style: solid;
-  border-width: 5px 6px;
-  height: 220px;
   box-sizing: border-box;
-  border-image: url("../img/bg/post-bg.png") 10 stretch;
-
-  /* не найду как сделать радиус внутри. с border-image не работет? */
   border-radius: 16px;
   background-color: var(--light-grey-bg);
   font-weight: 400;
@@ -648,6 +675,7 @@ input::-ms-input-placeholder {
   padding: 24px 10px 35px 20px;
   display: grid;
   grid-template-rows: 1fr min-content;
+  height: 100%;
 }
 
 .subscribe-button {
@@ -691,14 +719,16 @@ input::-ms-input-placeholder {
 
 .login-form {
   width: 241px;
-
-  /* display: grid; */
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 18px;
   position: absolute;
   right: 0;
   top: 35px;
   padding: 21px 17px 22px 19px;
+}
+
+.display-grid {
+  display: grid;
 }
 
 .header-button {
@@ -743,6 +773,7 @@ input::-ms-input-placeholder {
   font-size: 22px;
   line-height: 24px;
   margin-top: 8px;
+  border-bottom: 1px solid transparent;
 }
 
 .contacts-worktime {
@@ -834,11 +865,12 @@ input::-ms-input-placeholder {
 
 .orange-button {
   font-family: "Roboto", "Nimbus Sans L", Helvetica, Arial, sans-serif;
-  background-image: linear-gradient(
-    180deg,
-    var(--orange-button) 0%,
-    var(--intense-orange-button) 100%
-  );
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--orange-button) 0%,
+      var(--intense-orange-button) 100%
+    );
   box-shadow: 0 2px 2px var(--red-shadow-opacity);
   font-weight: 700;
   color: var(--basic-white);
@@ -847,7 +879,8 @@ input::-ms-input-placeholder {
 
 .orange-button:hover,
 .orange-button:focus {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       0deg,
       var(--white-opacity-02),
       var(--white-opacity-02)
@@ -861,7 +894,8 @@ input::-ms-input-placeholder {
 }
 
 .orange-button:active {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       0deg,
       var(--black-opacity-007),
       var(--black-opacity-007)
@@ -922,23 +956,40 @@ input::-ms-input-placeholder {
   left: 0;
 }
 
+.item-button {
+  position: absolute;
+  bottom: -51px;
+  left: 33px;
+  padding: 10px 16px;
+  display: none;
+}
+
 .item-card {
-  /* display: flex; */
-
-  /* flex-direction: column; */
-
-  /* align-items: center; */
-
-  /* flex-grow: 1; */
   position: relative;
   cursor: pointer;
   text-align: center;
 }
 
-.item-card:hover {
+.item-card:hover.item-card::after {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: -6px;
   background-color: var(--white-opacity-02);
   box-shadow: 0 20px 20px var(--black-opacity-02);
   border-radius: 4px;
+  width: 293px;
+  height: 402px;
+  z-index: 1;
+}
+
+.item-card:hover {
+  z-index: 2;
+}
+
+.item-card:hover > .item-button {
+  display: block;
+  z-index: 2;
 }
 
 .item-card p {
@@ -1060,6 +1111,7 @@ input::-ms-input-placeholder {
 .container-map {
   margin: 40px auto 0;
   position: relative;
+  height: 430px;
 }
 
 .container-map::after {
@@ -1100,7 +1152,7 @@ input::-ms-input-placeholder {
   line-height: 18px;
   color: var(--basic-white);
   margin: 0 27px;
-  padding: 12px 0 25px 0;
+  padding: 16px 0 25px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -1287,7 +1339,6 @@ input[type="range"] {
   padding-left: 17px;
 }
 
-/* если подвинуть pages к правому краю впритык, как на мекете, тогда при наведении проблемы с кружочками */
 .pages {
   font-family: "Roboto", "Nimbus Sans L", Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -1295,22 +1346,27 @@ input[type="range"] {
   line-height: 18px;
   color: var(--basic-white);
   padding: 0 0 35px 0;
-  margin: 77px 27px 0;
+  margin: 80px 27px 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   border-bottom: 1px solid var(--white-opacity-02);
 }
 
 .current-page {
-  background-color: var(--basic-white);
   color: var(--extra-dark);
+}
+
+.current-page::after {
+  content: "";
+  background-color: var(--basic-white);
+  position: absolute;
   border-radius: 50%;
-  margin-right: 5px;
   width: 26px;
   height: 26px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: -4px;
+  left: -8px;
+  z-index: -1;
 }
 
 .modal {
@@ -1348,7 +1404,7 @@ input[type="range"] {
   top: 36px;
   right: 0;
   width: 539px;
-  padding: 14px 14px 20px 18px;
+  padding: 18px 14px 20px 18px;
   box-sizing: border-box;
 }
 
@@ -1366,37 +1422,48 @@ input[type="range"] {
 }
 
 .total-price td {
-  border-top: 1px solid var(--grey-underline);
-  padding-top: 18px;
   text-align: end;
-}
-
-.cart-item {
-  padding-bottom: 20px;
+  padding-top: 22px;
 }
 
 .cart-item td {
-  padding-bottom: 17px;
+  padding-bottom: 15px;
+  position: relative;
 }
 
 .cart-item td:nth-child(1) {
   width: 11px;
-  padding-right: 6px;
+  top: -7px;
+  left: 2px;
 }
 
 .cart-item td:nth-child(2) {
   width: 33px;
-  padding-right: 10px;
+  top: 0;
+  left: 9px;
 }
 
 .cart-item td:nth-child(3) {
   width: 216px;
-  padding-right: 28px;
+  left: 20px;
+  padding-right: 51px;
+}
+
+.cart-item td:nth-child(5) {
+  left: -9px;
+}
+
+.cart-item td:nth-child(7) {
+  left: -3px;
+}
+
+.cart-item:nth-child(2) td:nth-child(3) {
+  top: 8px;
 }
 
 .table-price {
   color: var(--light-grey-cart);
-  padding-right: 20px;
+  left: -11px;
 }
 
 .table-weight {
@@ -1409,6 +1476,17 @@ input[type="range"] {
   font-size: 15px;
   line-height: 16px;
   color: var(--extra-dark);
+  position: relative;
+}
+
+.total-price::before {
+  content: "";
+  width: 95%;
+  height: 1px;
+  background-color: var(--grey-cart-line);
+  position: absolute;
+  top: 129px;
+  left: 14px;
 }
 
 .form-feedback {
