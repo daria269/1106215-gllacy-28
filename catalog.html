@@ -21,7 +21,8 @@
               <li class="inner-menu-li">
                 <a href="#">Новинки</a>
               </li>
-              <li class="inner-menu-li current-inner-menu">Сливочное</li>
+              <li class="current-inner-menu">Сливочное
+              </li>
               <li class="inner-menu-li">
                 <a href="#">Щербеты</a>
               </li>
@@ -62,7 +63,7 @@
                     fill="inherit" />
               </svg>&ensp;Вход
             </div>
-            <form class="hidden login-form " method="post" action="https://echo.htmlacademy.ru">
+            <form class="login-form " method="post" action="https://echo.htmlacademy.ru">
               <label>
                 <input class="input-field" type="email" name="login" placeholder="email@example.com" required="required" aria-label="Ввести email">
               </label>
@@ -165,16 +166,16 @@
           </select>
         </div>
         <label class="price">
-          <div class="filter-name">
+          <span class="filter-name">
             Цена: <span>100 ₽</span>&ensp;-&ensp;<span>500 ₽</span>
-          </div>
-          <div class="filter-option">
-            <div class="scale">
-              <div class="bar"></div>
-            </div>
-            <div class="toggle toggle-min"></div>
-            <div class="toggle toggle-max"></div>
-          </div>
+          </span>
+          <span class="filter-option">
+            <span class="scale">
+              <span class="bar"></span>
+            </span>
+            <span class="toggle toggle-min"></span>
+            <span class="toggle toggle-max"></span>
+          </span>
         </label>
         <fieldset class="fieldset">
           <legend class="filter-name">Жирность:</legend>
@@ -307,7 +308,7 @@
 
     <ol class="pages">
       <li>
-        <a aria-label="Перейти на предыдущую страницу" class="pages-a pages-a-disable">
+        <a aria-label="Перейти на предыдущую страницу" class="page page-disable">
           <svg class="icon-pre" width="7" height="12" aria-hidden="true" viewbox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" />
@@ -317,23 +318,23 @@
       <li class="current-page" aria-current="true"> 1
       </li>
       <li>
-        <a href="#" aria-label="Перейти на страницу 2" class="pages-a">2
+        <a href="#" aria-label="Перейти на страницу 2" class="page">2
         </a>
       </li>
       <li>
-        <a href="#" aria-label="Перейти на страницу 3" class="pages-a">3
+        <a href="#" aria-label="Перейти на страницу 3" class="page">3
         </a>
       </li>
       <li>
-        <a href="#" aria-label="Перейти на страницу 4" class="pages-a">4
+        <a href="#" aria-label="Перейти на страницу 4" class="page">4
         </a>
       </li>
       <li>
-        <a href="#" aria-label="Перейти на страницу 5" class="pages-a">5
+        <a href="#" aria-label="Перейти на страницу 5" class="page">5
         </a>
       </li>
       <li>
-        <a href="#" aria-label="Перейти на следующую страницу" class="pages-a">
+        <a href="#" aria-label="Перейти на следующую страницу" class="page">
           <svg class="icon-next" width="7" height="12" aria-hidden="true" viewbox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" />
@@ -347,7 +348,7 @@
   <footer class="container-footer">
     <ul class="social-icons">
       <li>
-        <a class="social-icons__a" href="#" aria-label="Мы в Фейсбуке">
+        <a class="social-icons-a" href="#" aria-label="Мы в Фейсбуке">
           <svg aria-hidden="true" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="icon-stroke" d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" />
             <path class="icon-letter"
@@ -357,7 +358,7 @@
         </a>
       </li>
       <li>
-        <a class="social-icons__a" href="#" aria-label="Мы в Вконтакте">
+        <a class="social-icons-a" href="#" aria-label="Мы в Вконтакте">
           <svg aria-hidden="true" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="icon-stroke" d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" />
             <path class="icon-letter"
@@ -373,7 +374,7 @@
         </a>
       </li>
       <li>
-        <a class="social-icons__a" href="#" aria-label="Мы в Инстаграм">
+        <a class="social-icons-a" href="#" aria-label="Мы в Инстаграм">
           <svg aria-hidden="true" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="icon-stroke" d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" />
             <g>
@@ -392,7 +393,7 @@
         </a>
       </li>
       <li>
-        <a class="social-icons__a" href="#" aria-label="Мы в Твиттере">
+        <a class="social-icons-a" href="#" aria-label="Мы в Твиттере">
           <svg aria-hidden="true" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="icon-stroke" d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" />
             <path class="icon-letter"
