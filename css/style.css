@@ -168,6 +168,8 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 18px;
+  width: 9px;
 }
 
 .breadcrumbs a,
@@ -391,6 +393,7 @@ a:visited {
 .icon-close {
   top: 15px;
   right: 15px;
+  cursor: pointer;
 }
 
 .icon-close:hover,
@@ -1008,7 +1011,7 @@ input::-ms-input-placeholder {
   border-radius: 4px;
   width: 293px;
   height: 402px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .item-card:hover {
