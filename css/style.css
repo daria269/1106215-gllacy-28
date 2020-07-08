@@ -18,7 +18,6 @@
   --grey-cart-line: #cacac7;
   --grey-range-toggle: #ababab;
   --overlay: rgba(0, 0, 0, 0.3);
-  --dirty-green: #849d8f;
   --dirty-orange: #d07058;
   --orange-link: #e84d37;
   --light-orange-link: #ffbc9e;
@@ -45,6 +44,9 @@
   --green-blur: rgba(215, 242, 227, 0.75);
   --blue-blur: rgba(218, 228, 239, 0.75);
   --pink-blur: rgba(239, 224, 218, 0.75);
+  --dirty-green-bg: #849d8f;
+  --blue-bg: #8996a6;
+  --dirty-pink-bg: #9d8b84;
 }
 
 body {
@@ -55,7 +57,7 @@ body {
   line-height: 22px;
   font-weight: 500;
   color: var(--basic-white);
-  background-color: var(--dirty-green);
+  background-color: var(--dirty-green-bg);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
@@ -105,9 +107,7 @@ a:visited {
   padding: 0;
 }
 
-.indicator1,
-.indicator2,
-.indicator3,
+.indicator,
 .indicator-active {
   width: 21px;
   height: 21px;
@@ -343,11 +343,6 @@ a:visited {
   color: var(--light-orange-link);
   border-bottom: 1px solid var(--light-orange-link-opacity);
 }
-
-/* .nav-left-li:hover > a,
-.nav-right-li:hover > a {
-  border: none;
-} */
 
 .nav-left-li > a:active {
   background-color: var(--dirty-white);
@@ -662,13 +657,12 @@ input::-ms-input-placeholder {
   background-color: var(--basic-white);
 }
 
-.indicator1:hover,
-.indicator2:hover,
-.indicator3:hover,
-.indicator1:focus,
-.indicator2:focus,
-.indicator3:focus {
+.indicator:hover {
   background-color: var(--white-opacity-04);
+}
+
+.indicator:active {
+  background-color: var(--basic-white);
 }
 
 .container-border {
@@ -820,6 +814,18 @@ input::-ms-input-placeholder {
   position: absolute;
   filter: blur(250px);
   z-index: -10;
+}
+
+.container-slider[data-blur-color="green"]::before {
+  background-color: var(--green-blur);
+}
+
+.container-slider[data-blur-color="blue"]::before {
+  background-color: var(--blue-blur);
+}
+
+.container-slider[data-blur-color="pink"]::before {
+  background-color: var(--pink-blur);
 }
 
 .slider-field {
@@ -1024,12 +1030,6 @@ input::-ms-input-placeholder {
   margin: -64px 0 25px 0;
 }
 
-/*
-  position: absolute;
-  left: 0;
-  top: 216px;
-  margin: 0; */
-
 .item-card span {
   font-size: 30px;
   line-height: 35px;
@@ -1043,8 +1043,6 @@ input::-ms-input-placeholder {
   color: var(--basic-white);
   border-bottom: 1px solid var(--white-opacity-02);
   display: inline;
-
-  /* margin-bottom: 0; */
 }
 
 .item-card .orange-button {
@@ -1417,10 +1415,11 @@ input::-ms-input-placeholder {
   height: 2420px;
   background-color: var(--overlay);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 15;
+  display: none;
 }
 
 .modal {

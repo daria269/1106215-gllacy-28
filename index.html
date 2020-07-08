@@ -119,9 +119,9 @@
         </div>
       </div>
       <div class="indicators-slider">
-        <button type="button" aria-label="Перейти на первый слайд" class="indicator-active"></button>
-        <button type="button" aria-label="Перейти на второй слайд" class="indicator2"></button>
-        <button type="button" aria-label="Перейти на третий слайд" class="indicator3"></button>
+        <button type="button" aria-label="Перейти на первый слайд" data-body-color="dirty-green-bg" data-blur-color="green" class="indicator indicator-active"></button>
+        <button type="button" aria-label="Перейти на второй слайд" data-body-color="blue-bg" data-blur-color="blue" class="indicator"></button>
+        <button type="button" aria-label="Перейти на третий слайд" data-body-color="dirty-pink-bg" data-blur-color="pink" class="indicator"></button>
       </div>
       <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
     </div>
@@ -313,7 +313,7 @@
     </div>
 
   </footer>
-  <div class="container-modal hidden">
+  <div class="container-modal">
     <div class="modal">
       <p>Мы обязательно вам ответим!</p>
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
@@ -328,14 +328,16 @@
         </label>
         <button class="orange-button button-index" type="submit">Отправить</button>
       </form>
-      <svg class="icon-close" role="img" tabindex="0" width="18" height="17" viewbox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="icon-close modal-close" role="img" tabindex="0" width="18" height="17" viewbox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>Закрыть окно</title>
         <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" />
       </svg>
     </div>
   </div>
 
-  <!-- <script src="js/script-index.js"> </script> -->
+  <script src="js/modal.js"> </script>
+  <script src="js/slider.js"> </script>
+
   <!-- <script src="js/script-index.min.js"> </script> -->
 
 </body>
