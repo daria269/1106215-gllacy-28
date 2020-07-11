@@ -32,7 +32,8 @@ let modal = document.querySelector(".container-modal");
 let modalClose = document.querySelector(".icon-close");
 
 if (modalButton) {
-  modalButton.addEventListener("click", function(e) {
+    modalButton.addEventListener("click", function(e) {
+    e.preventDefault()
     modal.style.display = "block";
   });
 }
@@ -42,3 +43,19 @@ if (modalClose) {
     modal.style.display = "none";
   });
 }
+
+///
+let inputField = document.querySelector('.input-field');
+let modalBlock = document.querySelector('.modal');
+let form = document.querySelector('.form-feedback');
+var nameForm = form.querySelector('[name="name"]');
+var emailForm = form.querySelector('[name="email"]');
+
+form.addEventListener('submit', function (e) {
+  if (!nameForm.value || !emailForm.value) {
+    e.preventDefault();
+    modalBlock.classList.remove('modal-error');
+
+    modalBlock.classList.add('modal-error');
+  }
+});

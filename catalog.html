@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,41 +41,44 @@
           </li>
         </ul>
         <ul class="top-nav-right">
-          <li>
-            <svg class="icon-nav nav-right-li  icon-search" width="16" role="img" tabindex="0" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <title>Найти на сайте</title>
-              <path
-                  d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
-                  fill="inherit" />
-            </svg>
-            <form class="search" method="get" action="https://echo.htmlacademy.ru">
-              <label>
-                <input class="input-field" type="search" aria-label="Поиск" placeholder="Крем-брюле">
-              </label> </form>
-          </li>
-          <li>
-            <div class="nav-right-li login" tabindex="0">
-              <svg class="icon-nav" aria-hidden="true" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="inherit" />
+            <li>
+              <svg class="icon-nav nav-right-li icon-search" width="16" role="img" tabindex="0" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <title>Найти на сайте</title>
                 <path
-                    d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
+                    d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
                     fill="inherit" />
-              </svg>&ensp;Вход
-            </div>
-            <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
-              <label>
-                <input class="input-field" type="email" name="login" placeholder="email@example.com" required="required" aria-label="Ввести email">
-              </label>
-              <label>
-                <input class="input-field" type="password" name="password" placeholder="••••••" required="required" aria-label="Ввести пароль">
-              </label>
-              <div>
-                <button class="orange-button header-button" type="submit">Войти</button>
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
+              </svg>
+              <form class="search" method="get" action="https://echo.htmlacademy.ru">
+                <label>
+                  <input class="input-field" type="search" aria-label="Поиск" placeholder="Крем-брюле">
+                </label>
+              </form>
+            </li>
+
+            <li>
+              <div class="nav-right-li login" tabindex="0">
+                <svg class="icon-nav" aria-hidden="true" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="inherit" />
+                  <path
+                      d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
+                      fill="inherit" />
+                </svg>&ensp;Вход
               </div>
-            </form>
-          </li>
+              <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
+                <label>
+                  <input class="input-field" type="email" name="login" placeholder="email@example.com" required="required" aria-label="Ввести email">
+                </label>
+                <label>
+                  <input class="input-field" type="password" name="password" placeholder="••••••" required="required" aria-label="Ввести пароль">
+                </label>
+                <div>
+                  <button class="orange-button header-button" type="submit">Войти</button>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
+              </form>
+            </li>
+
           <li>
             <div class="nav-right-li menu-cart" tabindex="0">
               <svg class="icon-nav" aria-hidden="true" width="21" height="20" viewbox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,56 +88,42 @@
                 <path class="icon-cart-inner" d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37" />
               </svg>&ensp;<span class="cart-number">2</span>&ensp;товара</div>
             <div class="cart">
-              <table>
-                <thead class="visually-hidden">
-                  <tr>
-                    <th colspan="3">Мороженое</th>
-                    <th colspan="2">Вес</th>
-                    <th>Цена/кг</th>
-                    <th>Стоимость</th>
-                  </tr>
-                </thead>
-                <tr class="cart-item">
-                  <td>
-                    <svg class="icon-delete" role="img" tabindex="0" width="11" height="11" viewbox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Убрать из корзины</title>
-                      <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="inherit" />
-                    </svg>
-                  </td>
-                  <td><img src="img/products/product-1.png" width="33" height="33" alt=""></td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td class="table-weight">1,5 кг</td>
-                  <td class="table-weight">x</td>
-                  <td class="table-price">200 руб.</td>
-                  <td>300 pуб.</td>
-                </tr>
-                <tr class="cart-item">
-                  <td>
-                    <svg class="icon-delete" role="img" tabindex="0" width="11" height="11" viewbox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Убрать из корзины</title>
-                      <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="inherit" />
-                    </svg>
-                  </td>
-                  <td><img src="img/products/product-3.png" width="33" height="33" alt=""></td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td class="table-weight">1,5 кг</td>
-                  <td class="table-weight">x</td>
-                  <td class="table-price">300 руб.</td>
-                  <td>450 pуб.</td>
-                </tr>
-                <tr class="total-price">
-                  <td colspan="7">Итого: 750 руб.</td>
-                </tr>
-              </table>
-              <a class="orange-button header-button" href="#">Оформить заказ</a>
+                    <div class="cart-item">
+                        <button type="button" class="icon-delete">
+                          <svg role="img" tabindex="0" width="11" height="11" viewbox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <title>Убрать из корзины</title>
+                            <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="inherit" />
+                          </svg>
+                        </button>
+                        <img src="img/products/product-1.png" width="33" height="33" alt="Пломбир с апельсином.">
+                        <p>Пломбир с апельсиновым джемом</p>
+                        <span class="cart-weight">1,5 кг x&thinsp;</span>
+                        <span class="cart-price">200 руб.</span>
+                        <span>300 pуб.</span>
+                </div>
+                    <div class="cart-item">
+                        <button type="button" class="icon-delete">
+                          <svg role="img" tabindex="0" width="11" height="11" viewbox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <title>Убрать из корзины</title>
+                            <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="inherit" />
+                          </svg>
+                        </button>
+                        <img src="img/products/product-3.png" width="33" height="33" alt="Клубничный пломбир.">
+                        <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                        <span class="cart-weight">1,5 кг x&thinsp;</span>
+                        <span class="cart-price">300 руб.</span>
+                        <span>450 pуб.</span>
+                    </div>
+                <p class="total-price">Итого: 750 руб.
+                </p>
+                <a class="orange-button header-button" href="#">Оформить заказ</a>
             </div>
           </li>
         </ul>
-
       </nav>
     </div>
     <div class="contacts">
-      <p class="contacts-worktime">с 10 до 20, ежедневно<br></p>
+      <p class="contacts-worktime">с 10 до 20, ежедневно</p>
       <a href="tel:+78124502525" aria-label="Позвонить по телефону:" class="contacts-tel">8 812 450-25-25</a>
     </div>
   </header>
@@ -172,8 +161,8 @@
             <span class="scale">
               <span class="bar"></span>
             </span>
-            <span class="toggle toggle-min"></span>
-            <span class="toggle toggle-max"></span>
+            <span tabindex="0" class="toggle toggle-min"></span>
+            <span tabindex="0" class="toggle toggle-max"></span>
           </span>
         </label>
         <fieldset class="fieldset fat-content">
@@ -234,73 +223,73 @@
         <img src="img/products/product-1.png" alt="Сливочное мороженое с апельсином." width="267" height="267" title="Сливочное с апельсином">
         <p>310 ₽<span>/кг</span></p>
         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-2.png" alt="Сливочно-кофейное мороженое." width="267" height="267" title="Сливочно-кофейное">
         <p>380 ₽<span>/кг</span></p>
         <h3>Сливочно-кофейное с кусочками шоколада</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-3.png" alt="Сливочно-клубничное мороженое." width="267" height="267" title="Сливочно-клубничное">
         <p>355 ₽<span>/кг</span></p>
         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-4.png" alt="Мороженое крем-брюле." width="267" height="267" title="Крем-брюле">
         <p>415 ₽<span>/кг</span></p>
         <h3>Сливочное крем-брюле<br>с карамельной подливкой</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-5.png" alt="Сливочно-брусничное мороженое." width="267" height="267" title="Сливочно-брусничное">
         <p>325 ₽<span>/кг</span></p>
         <h3>Сливочное с брусничным<br>джемом</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-6.png" alt="Сливочно-черничное мороженое." width="267" height="267" title="Сливочно-черничное">
         <p>410 ₽<span>/кг</span></p>
         <h3>Сливочно-черничное с цельными ягодами черники</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-7.png" alt="Сливочно-лимонное мороженое." width="267" height="267" title="Сливочно-лимонное">
         <p>315 ₽<span>/кг</span></p>
         <h3>Сливочно-лимонное с карамельной присыпкой</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-8.png" alt="Мороженое с шоколадной стружкой." width="267" height="267" title="С шоколадной стружкой">
         <p>320 ₽<span>/кг</span></p>
         <h3>Сливочное с шоколадной стружкой</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-9.png" alt="Сливочно-ванильное мороженое." width="267" height="267" title="Сливочно-ванильное">
         <p>440 ₽<span>/кг</span></p>
         <h3>Сливочно-ванильное<br>с кусочками шоколада</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-10.png" alt="Мороженое с ментоловым сиропом." width="267" height="267" title="С ментоловым сиропом">
         <p>435 ₽<span>/кг</span></p>
         <h3>Сливочноe с ментоловым сиропом</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-11.png" alt="Мороженое с кусочками шоколада." width="267" height="267" title="С кусочками шоколада">
         <p>355 ₽<span>/кг</span></p>
         <h3>Сливочное с кусочками черного шоколада</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="item-card">
         <img src="img/products/product-12.png" alt="Сливочно-мятное мороженое." width="267" height="267" title="Сливочно-мятное">
         <p>420 ₽<span>/кг</span></p>
         <h3>Сливочное с мятным сиропом</h3>
-        <button class="item-button orange-button" type="button">Быстрый просмотр</button>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
 
     </section>
