@@ -10,13 +10,13 @@ function showSlides(number, bodyColor, blurColor) {
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    indicators[i].classList.remove("indicator-active");
+    indicators[i].classList.remove("indicator-current");
   }
 
   containerSlider.dataset.blurColor = blurColor;
   body.style.backgroundColor = "var(--" + bodyColor + ")";
   slides[number - 1].style.display = "block";
-  indicators[number - 1].classList.add("indicator-active");
+  indicators[number - 1].classList.add("indicator-current");
 }
 
 for (let i = 0; i < indicators.length; i++) {
@@ -48,8 +48,8 @@ if (modalClose) {
 let inputField = document.querySelector('.input-field');
 let modalBlock = document.querySelector('.modal');
 let form = document.querySelector('.form-feedback');
-var nameForm = form.querySelector('[name="name"]');
-var emailForm = form.querySelector('[name="email"]');
+let nameForm = form.querySelector('[name="name"]');
+let emailForm = form.querySelector('[name="email"]');
 
 form.addEventListener('submit', function (e) {
   if (!nameForm.value || !emailForm.value) {

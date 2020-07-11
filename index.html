@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -107,27 +107,27 @@
         <div class="slider-element">
           <img src="img/products/slide-1.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом.">
           <div class="slider-desc">
-              <p class="slider-title">Крем-брюле и пломбир с малиновым джемом</p>
-              <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
+            <p class="slider-title">Крем-брюле и пломбир с малиновым джемом</p>
+            <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
           </div>
         </div>
         <div class="hidden slider-element">
           <img src="img/products/slide-3.png" width="647" height="584" alt="Пломбир с помадкой и клубничный щербет.">
           <div class="slider-desc">
-              <p class="slider-title">Пломбир с помадкой и клубничный щербет</p>
-              <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
+            <p class="slider-title">Пломбир с помадкой и клубничный щербет</p>
+            <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
           </div>
         </div>
         <div class="hidden slider-element">
           <img src="img/products/slide-2.png" width="647" height="584" alt="Шоколадный пломбир и лимонный сорбет.">
           <div class="slider-desc">
-              <p class="slider-title">Шоколадный пломбир и лимонный сорбет</p>
-              <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
-            </div>
+            <p class="slider-title">Шоколадный пломбир и лимонный сорбет</p>
+            <a class="orange-button slider-button" href="catalog.html" aria-label="Перейти в каталог">Давайте оба!</a>
+          </div>
         </div>
       </div>
       <div class="indicators-slider">
-        <button type="button" aria-label="Перейти на первый слайд" data-body-color="dirty-green-bg" data-blur-color="green" class="indicator indicator-active"></button>
+        <button type="button" aria-label="Перейти на первый слайд" data-body-color="dirty-green-bg" data-blur-color="green" class="indicator indicator-current"></button>
         <button type="button" aria-label="Перейти на второй слайд" data-body-color="blue-bg" data-blur-color="blue" class="indicator"></button>
         <button type="button" aria-label="Перейти на третий слайд" data-body-color="dirty-pink-bg" data-blur-color="pink" class="indicator"></button>
       </div>
@@ -160,21 +160,21 @@
         <p>380 ₽<span>/кг</span></p>
         <h3>Сливочно-кофейное с кусочками<br>
           шоколада</h3>
-          <a href="#" class="item-button orange-button">Быстрый просмотр</a>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="popular-item item-card ">
         <img src="img/products/product-3.png" alt="Сливочно-клубничное мороженое." width="267" height="267" title="Сливочно-клубничное">
         <p>355 ₽<span>/кг</span></p>
         <h3>Сливочно-клубничное<br>
           с присыпкой из белого шоколада</h3>
-          <a href="#" class="item-button orange-button">Быстрый просмотр</a>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
       <article class="popular-item item-card">
         <img src="img/products/product-4.png" alt="Мороженое крем-брюле." width="267" height="267" title="Крем-брюле">
         <p>415 ₽<span>/кг</span></p>
         <h3>Сливочное крем-брюле<br>
           с карамельной подливкой</h3>
-          <a href="#" class="item-button orange-button">Быстрый просмотр</a>
+        <a href="#" class="item-button orange-button">Быстрый просмотр</a>
       </article>
     </section>
 
@@ -220,8 +220,9 @@
 
     <section class="container-map">
       <h3 class="visually-hidden">Как нас найти</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1594378386819!5m2!1sru!2sru" width="1200" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Мы на карте"></iframe>
-      <!-- <img src="img/map.jpg" width="1200" height="430" alt="Как нас найти." title="Мы на карте"> -->
+      <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1594378386819!5m2!1sru!2sru"
+          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Мы на карте"></iframe>
       <div class="address-info">
         <p>Адрес главного офиса<br> и офлайн-магазина:<br>
           <span>ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург</span>
@@ -329,23 +330,23 @@
           <input class="input-field" type="text" name="name" placeholder="Имя Фамилия">
         </label>
         <label>
-          <input class="input-field" type="email" name="email" placeholder="email@example.com" required="required">
+          <input class="input-field" type="email" name="email" placeholder="email@example.com">
         </label>
         <label>
-          <textarea class="input-field" name="feedback" rows="8" cols="45" placeholder="В свободной форме" ></textarea>
+          <textarea class="input-field" name="feedback" rows="8" cols="45" placeholder="В свободной форме"></textarea>
         </label>
         <button class="orange-button button-index" type="submit">Отправить</button>
       </form>
       <button type="button" class="icon-close">
-          <svg role="img" tabindex="0" width="18" height="17" viewbox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <title>Закрыть окно</title>
-        <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" />
-          </svg>
+        <svg role="img" tabindex="0" width="18" height="17" viewbox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <title>Закрыть окно</title>
+          <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" />
+        </svg>
       </button>
     </div>
   </div>
 
-  <script src="js/index.js"> </script>
+  <script src="js/index.min.js"> </script>
 
 </body>
 
