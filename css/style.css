@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :root {
     --basic-black: #000;
     --black-opacity-007: rgba(0, 0, 0, 0.07);
@@ -1073,6 +1080,8 @@ input::-ms-input-placeholder {
     color: var(--basic-white);
     margin: 0;
     margin-bottom: 25px;
+    max-height: 434px;
+    overflow-y: hidden;
 }
 
 .slider-element {
@@ -1094,6 +1103,7 @@ input::-ms-input-placeholder {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 .slider-desc {
