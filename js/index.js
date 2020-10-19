@@ -20,7 +20,7 @@ function showSlides(number, bodyColor, blurColor, sliderImage) {
 }
 
 for (let i = 0; i < indicators.length; i++) {
-  indicators[i].addEventListener("click", function() {
+  indicators[i].addEventListener("click", function () {
     showSlides(i + 1, indicators[i].dataset.bodyColor, indicators[i].dataset.blurColor, indicators[i].dataset.sliderImage);
   });
 }
@@ -32,14 +32,14 @@ let modal = document.querySelector(".container-modal");
 let modalClose = document.querySelector(".icon-close");
 
 if (modalButton) {
-    modalButton.addEventListener("click", function(e) {
+  modalButton.addEventListener("click", function (e) {
     e.preventDefault()
     modal.style.display = "block";
   });
 }
 
 if (modalClose) {
-  modalClose.addEventListener("click", function(e) {
+  modalClose.addEventListener("click", function (e) {
     modal.style.display = "none";
   });
 }
